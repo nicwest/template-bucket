@@ -19,7 +19,6 @@ let s:T.django.unittests = {'ft': 'python.django', 'temp': 'python/unittests.py'
 let s:T.django.factories = {'ft': 'python.django', 'temp': 'python/factories.py'}
 let s:T.django.base = {'ft': 'htmldjango', 'temp': 'html/base.html'}
 let s:T.django.content = {'ft': 'htmldjango', 'temp': 'html/content.html'}
-
 " Python: {{{2
 let s:T.python = {}
 let s:T.python.tasks = {'ft': 'python', 'temp': 'tasks.py'}
