@@ -8,9 +8,21 @@ let s:T.vim.plugin = {'ft': 'vim', 'temp': 'plugin.vim'}
 let s:T.vim.autoload = {'ft': 'vim', 'temp': 'autoload.vim'}
 " Django: {{{2
 let s:T.django = {}
+let s:T.django.admin = {'ft': 'python.django', 'temp': 'python/admin.py'}
+let s:T.django.assets = {'ft': 'python.django', 'temp': 'python/assets.py'}
+let s:T.django.celery = {'ft': 'python.django', 'temp': 'python/celery.py'}
+let s:T.django.signals = {'ft': 'python.django', 'temp': 'python/signals.py'}
 let s:T.django.views = {'ft': 'python.django', 'temp': 'python/views.py'}
-let s:T.django.unittest = {'ft': 'python.django', 'temp': 'python/unittests.py'}
-let s:T.django.factory = {'ft': 'python.django', 'temp': 'python/factories.py'}
+let s:T.django.models = {'ft': 'python.django', 'temp': 'python/models.py'}
+let s:T.django.forms = {'ft': 'python.django', 'temp': 'python/forms.py'}
+let s:T.django.unittests = {'ft': 'python.django', 'temp': 'python/unittests.py'}
+let s:T.django.factories = {'ft': 'python.django', 'temp': 'python/factories.py'}
+let s:T.django.base = {'ft': 'htmldjango', 'temp': 'html/base.html'}
+let s:T.django.content = {'ft': 'htmldjango', 'temp': 'html/content.html'}
+
+" Python: {{{2
+let s:T.python = {}
+let s:T.python.tasks = {'ft': 'python', 'temp': 'tasks.py'}
 
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
@@ -22,6 +34,7 @@ function! templates#apply(bang, lang, name) abort
   endif
   let l:settings = s:T[a:lang][a:name]
   let l:template = s:sfile . '/templates/' . a:lang . '/' . l:settings.temp
+  let b:template = a:lang . '/' . l:settings.temp
   exe 'set ft=' . l:settings.ft
   let l:output = templates#render#render(l:template, l:settings)
   if a:bang
@@ -30,13 +43,21 @@ function! templates#apply(bang, lang, name) abort
   call append(0, l:output)
   sil norm! zR
   sil norm! G"_ddgg
-  let l:insert = match(l:output, s:insert_pat)
-  if l:insert > -1
-    let l:insert_line = substitute(l:output[l:insert], '%\{2\}\s*INSERT\s*%\{2\}', '', '')
-    let l:insert_location = match(l:output[l:insert], '%\{2\}\s*INSERT\s*%\{2\}')
-    call setline(l:insert+1, l:insert_line)
-    call cursor(l:insert+1, l:insert_location+1)
-    startinsert
+endfunction
+
+function! templates#edit(...) abort
+  if a:0 == 0
+    if exists('b:template')
+      exe 'sf' s:sfile . '/templates/' . b:template
+    else
+      throw 'There is no record of what template was used to create this file'
+    endif
+  elseif a:0 == 2
+    let l:settings = s:T[a:1][a:2]
+    let l:template = a:1 . '/'. l:settings.temp
+    exe 'sf' s:sfile . '/templates/' . l:template
+  else
+    throw 'Not enough arguments :('
   endif
 endfunction
 

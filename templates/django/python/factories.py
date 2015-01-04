@@ -2,7 +2,11 @@ from factory import Sequence, SubFactory
 from factory.django import DjangoModelFactory
 %%DJANGO_RELEVANT_IMPORTS%%
 
-class %%INSERT%%Factory(DjangoModelFactory):
+
+class Factory(DjangoModelFactory):
+    """
+    Write Docs!
+    """
 
     FACTORY_FOR = models.ModelName
 

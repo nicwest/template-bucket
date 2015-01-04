@@ -76,7 +76,10 @@ function! templates#vars#django_related_imports () abort
     if l:filename == 'models.py' && l:item != 'utils.py'
       continue
     endif
-    if l:filename == 'utils.py' && l:item != 'models.py'
+    if l:filename == 'urls.py' && l:item != 'views.py'
+      continue
+    endif
+    if l:filename == 'admin.py' && l:item != 'models.py'
       continue
     endif
     if l:filename =~ 'test_[a-zA-Z_]\+\.py' 

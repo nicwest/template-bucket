@@ -3,7 +3,10 @@ from django.test import UnitTest
 %%DJANGO_RELATED_IMPORTS%%
 
 
-class Test%%INSERT%%(TestCase):
+class Test(TestCase):
+    """
+    Write Docs!
+    """
 
     def setUp(self):
         pass
