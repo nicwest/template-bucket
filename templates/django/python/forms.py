@@ -8,7 +8,7 @@ class Form(forms.Form):
     """
     Write Docs!
     """
-    field_name = forms.CharFeild(max_length=255)
+    field_name = forms.CharField(max_length=255)
 
     def clean_field_name(self):
         field_name = self.cleaned_data.get('field_name')
