@@ -15,6 +15,7 @@ let s:T.django.signals = {'ft': 'python.django', 'temp': 'python/signals.py'}
 let s:T.django.views = {'ft': 'python.django', 'temp': 'python/views.py'}
 let s:T.django.models = {'ft': 'python.django', 'temp': 'python/models.py'}
 let s:T.django.forms = {'ft': 'python.django', 'temp': 'python/forms.py'}
+let s:T.django.urls = {'ft': 'python.django', 'temp': 'python/urls.py'}
 let s:T.django.unittests = {'ft': 'python.django', 'temp': 'python/unittests.py'}
 let s:T.django.factories = {'ft': 'python.django', 'temp': 'python/factories.py'}
 let s:T.django.base = {'ft': 'htmldjango', 'temp': 'html/base.html'}
