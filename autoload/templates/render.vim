@@ -18,7 +18,7 @@ function! templates#render#render(t, s) abort
 endfunction
 
 let s:line_contains_var = '^.*%\{2}\s*.\+\s*%\{2}.*$'
-let s:var_pat = '%\{2}\s*\(\S\+\)\s*\(\(\(%\{2}\)\@!\)*\)\s*%\{2}'
+let s:var_pat = '%\{2}\s*\(\S\+\)\s*\(.*\)\s*%\{2}'
 let s:var_sub = '\=s:replace_keyword(submatch(1), submatch(2))'
 
 function! s:expand_keywords(l, s)

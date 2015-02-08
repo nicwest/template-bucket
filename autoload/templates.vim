@@ -23,6 +23,9 @@ let s:T.django.content = {'ft': 'htmldjango', 'temp': 'html/content.html'}
 " Python: {{{2
 let s:T.python = {}
 let s:T.python.tasks = {'ft': 'python', 'temp': 'tasks.py'}
+" Jekyll: {{{2
+let s:T.jekyll = {}
+let s:T.jekyll.post = {'ft': 'markdown', 'temp': 'post.md'}
 
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
