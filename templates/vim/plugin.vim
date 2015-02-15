@@ -5,8 +5,6 @@ set cpo&vim
 " load guard
 " uncomment after plugin development.
 "if exists("g:loaded_%%BASENAME%%")
-"      \ || v:version < %%VIM_VERSION%%
-"      \ || v:version == %%VIM_VERSION%% && !has('patch%%VIM_PATCH%%')
 "  let &cpo = s:save_cpo
 "  finish
 "endif
