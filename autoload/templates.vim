@@ -4,8 +4,12 @@ let s:T = {} " Template dict
 " Templates: {{{1
 " Vim: {{{2
 let s:T.vim = {}
-let s:T.vim.plugin = {'ft': 'vim', 'temp': 'plugin.vim'}
 let s:T.vim.autoload = {'ft': 'vim', 'temp': 'autoload.vim'}
+let s:T.vim.colors = {'ft': 'vim', 'temp': 'colors.vim'}
+let s:T.vim.doc = {'ft': 'help', 'temp': 'doc.txt'}
+let s:T.vim.ftdetect = {'ft': 'vim', 'temp': 'ftdetect.vim'}
+let s:T.vim.plugin = {'ft': 'vim', 'temp': 'plugin.vim'}
+let s:T.vim.syntax = {'ft': 'vim', 'temp': 'syntax.vim'}
 " Django: {{{2
 let s:T.django = {}
 let s:T.django.admin = {'ft': 'python.django', 'temp': 'python/admin.py'}
