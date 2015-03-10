@@ -11,6 +11,7 @@ let s:T.vim.ftdetect = {'ft': 'vim', 'temp': 'ftdetect.vim'}
 let s:T.vim.plugin = {'ft': 'vim', 'temp': 'plugin.vim'}
 let s:T.vim.syntax = {'ft': 'vim', 'temp': 'syntax.vim'}
 let s:T.vim.test = {'ft': 'vim', 'temp': 'test.vim'}
+let s:T.vim.themisrc = {'ft': 'vim', 'temp': 'themisrc.vim'}
 " Django: {{{2
 let s:T.django = {}
 let s:T.django.admin = {'ft': 'python.django', 'temp': 'python/admin.py'}
