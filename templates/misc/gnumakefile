@@ -1,0 +1,6 @@
+include $(GNUSTEP_MAKEFILES)/common.make
+
+TOOL_NAME = %%BASENAME%%
+%%BASENAME%%_OBJC_FILES = %%BASENAME%%.m
+
+include $(GNUSTEP_MAKEFILES)/tool.make

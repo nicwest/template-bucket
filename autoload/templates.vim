@@ -33,6 +33,13 @@ let s:T.python.tasks = {'ft': 'python', 'temp': 'tasks.py'}
 let s:T.jekyll = {}
 let s:T.jekyll.post = {'ft': 'markdown', 'temp': 'post.md'}
 
+"Objc: {{{2
+let s:T.objc = {}
+let s:T.objc.src = {'ft': 'objc', 'temp': 'source.m'}
+" Misc: {{{2
+let s:T.misc = {}
+let s:T.misc.gnumakefile = {'ft': 'make', 'temp': 'gnumakefile'}
+
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
 
