@@ -29,6 +29,9 @@ let s:T.django.content = {'ft': 'htmldjango', 'temp': 'html/content.html'}
 " Python: {{{2
 let s:T.python = {}
 let s:T.python.tasks = {'ft': 'python', 'temp': 'tasks.py'}
+let s:T.python.setuppy = {'ft': 'python', 'temp': 'setup.py'}
+let s:T.python.setupcfg = {'ft': 'cfg', 'temp': 'setup.cfg'}
+let s:T.python.projectionist = {'ft': 'json', 'temp': '.projections.json'}
 " Jekyll: {{{2
 let s:T.jekyll = {}
 let s:T.jekyll.post = {'ft': 'markdown', 'temp': 'post.md'}

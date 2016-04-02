@@ -24,7 +24,7 @@ function! templates#vars#basename () abort
 endfunction
 
 function! templates#vars#dirname () abort
-  return expand('%:h:t')
+  return expand('%:p:h:t')
 endfunction
 
 function! templates#vars#cwd_path () abort
