@@ -45,6 +45,7 @@ let s:T.misc.gnumakefile = {'ft': 'make', 'temp': 'gnumakefile'}
 "Go: {{{2
 let s:T.go = {}
 let s:T.go.convey = {'ft': 'go', 'temp': 'convey.go'}
+let s:T.go.projectionist = {'ft': 'json', 'temp': '.projections.json'}
 
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
