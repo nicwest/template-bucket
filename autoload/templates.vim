@@ -46,6 +46,7 @@ let s:T.misc.gnumakefile = {'ft': 'make', 'temp': 'gnumakefile'}
 let s:T.go = {}
 let s:T.go.convey = {'ft': 'go', 'temp': 'convey.go'}
 let s:T.go.projectionist = {'ft': 'json', 'temp': '.projections.json'}
+let s:T.go.test = {'ft': 'go', 'temp': 'test.go'}
 
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
@@ -94,6 +95,11 @@ function! templates#completion(A, L, P) abort
     endif
     return join(keys(s:T[l:args[1]]), "\n") . "\n"
   endif
+endfunction
+
+function! templates#new(lang, filename) abort 
+  exe 'new ' . s:sfile . '/templates/' . a:lang . '/' . a:filename
+  exe 'split ' . s:sfile . '/autoload/templates.vim'
 endfunction
 
 " Misc: {{{1
