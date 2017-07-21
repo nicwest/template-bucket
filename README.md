@@ -5,3 +5,4 @@ Templates
 
 `:Template[!] {lang} {template_name}`  
 `:TemplateEdit [{lang} {template_name}]`
+`:TemplateNew [{lang} {template_filename}]`
