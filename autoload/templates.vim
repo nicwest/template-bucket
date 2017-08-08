@@ -48,6 +48,11 @@ let s:T.go.convey = {'ft': 'go', 'temp': 'convey.go'}
 let s:T.go.projectionist = {'ft': 'json', 'temp': '.projections.json'}
 let s:T.go.test = {'ft': 'go', 'temp': 'test.go'}
 
+" HTTP: {{{2
+let s:T.http = {}
+let s:T.http.jsonrpc = {'ft': 'http', 'temp': 'jsonrpc.http'}
+
+
 " Patterns: {{{1
 let s:insert_pat = '^.*%\{2\}\s*INSERT\s*%\{2\}.*$'
 
