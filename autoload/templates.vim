@@ -91,14 +91,14 @@ function! templates#edit(...) abort
 endfunction
 
 function! templates#completion(A, L, P) abort
-  let l:args = matchlist(a:L, 'Template!\?\s*\(\S*\)\(\s*\)\(\S*\).*') 
-  if len(l:args[2]) == 0
+  let l:args = matchlist(a:L, 'Template\(Edit\|New\|!\)\?\s*\(\S*\)\(\s*\)\(\S*\).*') 
+  if len(l:args[3]) == 0
     return join(keys(s:T), "\n") . "\n"
   else
-    if !has_key(s:T, l:args[1])
+    if !has_key(s:T, l:args[2])
       return ''
     endif
-    return join(keys(s:T[l:args[1]]), "\n") . "\n"
+    return join(keys(s:T[l:args[2]]), "\n") . "\n"
   endif
 endfunction
 
